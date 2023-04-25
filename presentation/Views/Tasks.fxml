@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.Controllers.TasksController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="600.0" style="-fx-border-color: #DDD; -fx-background-color: #FFF; -fx-border-width: 2px;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logoPeojet.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="87.0" layoutY="22.0" text="Tâches">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="ajouterTask" layoutX="488.0" layoutY="23.0" mnemonicParsing="false" onAction="#getAjouterTaskScene" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #333;" text="Ajouter" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="home" layoutX="273.0" layoutY="21.0" mnemonicParsing="false" onAction="#goHome" prefHeight="27.0" prefWidth="112.0" style="-fx-background-color: #333;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table" layoutY="70.0" prefHeight="329.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="descr" prefWidth="132.00000303983688" text="Description" />
+            <TableColumn fx:id="title" prefWidth="115.20001220703125" text="Actions" />
+            <TableColumn fx:id="dateDebut" prefWidth="104.80003356933594" text="Date debut" />
+            <TableColumn fx:id="dateFin" prefWidth="105.5999755859375" text="Date fin" />
+            <TableColumn fx:id="projet" prefWidth="144.800048828125" text="Niveau d'avancement" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

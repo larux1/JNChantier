@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.Controllers.BPMNController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="149.0" style="-fx-background-color: #333;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logoPeojet.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="22.0" text="Java Project" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <VBox layoutX="-3.0" layoutY="70.0" prefHeight="200.0" prefWidth="151.0">
+               <children>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#goHome" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0Px 0Px 1PX 0PX;" text="Home" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0Px 0Px 1PX 0PX;" text="My Tasks" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0PX 0PX 1PX 0PX;" text="Charts" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0PX 0PX 1PX 0PX;" text="Profile" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0PX 0PX 1PX 0PX;" text="LogOut" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="5.0" layoutY="21.0" style="-fx-font-weight: 700;" text="Etat d'avancement">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="226.0" layoutY="140.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="progressBar" layoutX="243.0" layoutY="79.0" prefWidth="200.0" progress="0.0" />
+            <Button fx:id="refreshButton" layoutX="159.0" layoutY="66.0" mnemonicParsing="false" onAction="#refreshAction" text="Rafraîchir" />
+            <Label fx:id="progressLabel" layoutX="343.0" layoutY="58.0" text="Progression" />
+            <Button fx:id="graphButton" layoutX="226.0" layoutY="110.0" mnemonicParsing="false" onAction="#displayGraph" prefHeight="25.0" prefWidth="104.0" text="Niveaux de sons" />
+            <AnchorPane fx:id="graphContainer" layoutX="19.0" layoutY="140.0" prefHeight="249.0" prefWidth="388.0" />
+            <Label fx:id="tacheLab" layoutX="260.0" layoutY="24.0" text="1- Installer les équipements">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="213.0" layoutY="23.0" prefHeight="22.0" prefWidth="46.0" text="Tâche: ">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="263.0" layoutY="58.0" text="Progression: " />
+            <Button fx:id="generebpmn" layoutX="19.0" layoutY="110.0" mnemonicParsing="false" onAction="#generebpmnAction" text="Générer diagramme BPMN" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
